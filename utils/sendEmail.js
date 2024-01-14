@@ -9,7 +9,7 @@ export const sendMail = async (to, subject, text) => {
     },
   });
   await transporter.sendMail({
-    from: "myId@gmail.com",
+    from: process.env.NODEMAILER_USER,
     to,
     subject,
     text,
